@@ -425,7 +425,7 @@ Supported_Groups::Supported_Groups(TLS_Data_Reader& reader,
       const uint16_t id = reader.get_uint16_t();
 
       const bool is_dh = (id >= 256 && id <= 511);
-      const std::string name = group_param_to_string(id);
+      const std::string name = group_param_to_string(group_id);
 
       if(!name.empty())
          {
